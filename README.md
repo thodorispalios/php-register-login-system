@@ -2,7 +2,6 @@
 
 Register and Login system for the sample website "webite". 
 
-Bootstrap
+Also added an evaluation system
 
-
-Database not included
+The website uses the bootstrap framework
