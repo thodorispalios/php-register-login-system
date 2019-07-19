@@ -77,106 +77,126 @@
                     <div class="slideshow-container">
                         <!-- Questionaire in the form of a slideshow -->
                         <div class="mySlides">
-                            <h2>Νομίζω ότι θα ήθελα να χρησιμοποιώ αυτά τα παιχνίδια συχνά</h2>
-                            Διαφωνώ
-                            <button type="button" class="btn btn-outline-danger btn-lg">1</button>
-                            <button type="button" class="btn btn-outline-dark btn-lg">2</button>
-                            <button type="button" class="btn btn-outline-warning btn-lg">3</button>
-                            <button type="button" class="btn btn-outline-dark btn-lg">4</button>
-                            <button type="button" class="btn btn-outline-primary btn-lg">5</button>
-                            Συμφωνώ
+                            <div name="question1">
+                                <h2>Νομίζω ότι θα ήθελα να χρησιμοποιώ αυτά τα παιχνίδια συχνά</h2>
+                                Διαφωνώ
+                                <button type="button" class="btn btn-outline-danger btn-lg">1</button>
+                                <button type="button" class="btn btn-outline-dark btn-lg">2</button>
+                                <button type="button" class="btn btn-outline-warning btn-lg">3</button>
+                                <button type="button" class="btn btn-outline-dark btn-lg">4</button>
+                                <button type="button" class="btn btn-outline-primary btn-lg">5</button>
+                                Συμφωνώ
+                            </div>
                         </div>
                         <div class="mySlides">
-                            <h2>Βρήκα αυτά τα παιχνίδια αδικαιολόγητα περίπλοκα</h2>
-                            Διαφωνώ
-                            <button type="button" class="btn btn-outline-danger btn-lg">1</button>
-                            <button type="button" class="btn btn-outline-dark btn-lg">2</button>
-                            <button type="button" class="btn btn-outline-warning btn-lg">3</button>
-                            <button type="button" class="btn btn-outline-dark btn-lg">4</button>
-                            <button type="button" class="btn btn-outline-primary btn-lg">5</button>
-                            Συμφωνώ
+                            <div name="question2">
+                                <h2>Βρήκα αυτά τα παιχνίδια αδικαιολόγητα περίπλοκα</h2>
+                                Διαφωνώ
+                                <button type="button" class="btn btn-outline-danger btn-lg">1</button>
+                                <button type="button" class="btn btn-outline-dark btn-lg">2</button>
+                                <button type="button" class="btn btn-outline-warning btn-lg">3</button>
+                                <button type="button" class="btn btn-outline-dark btn-lg">4</button>
+                                <button type="button" class="btn btn-outline-primary btn-lg">5</button>
+                                Συμφωνώ
+                            </div>
                         </div>
                         <div class="mySlides">
-                            <h2>Σκέφτηκα ότι αυτά τα παιχνίδια ήταν εύκολα στη χρήση</h2>
-                            Διαφωνώ
-                            <button type="button" class="btn btn-outline-danger btn-lg">1</button>
-                            <button type="button" class="btn btn-outline-dark btn-lg">2</button>
-                            <button type="button" class="btn btn-outline-warning btn-lg">3</button>
-                            <button type="button" class="btn btn-outline-dark btn-lg">4</button>
-                            <button type="button" class="btn btn-outline-primary btn-lg">5</button>
-                            Συμφωνώ
+                            <div name="question3">
+                                <h2>Σκέφτηκα ότι αυτά τα παιχνίδια ήταν εύκολα στη χρήση</h2>
+                                Διαφωνώ
+                                <button type="button" class="btn btn-outline-danger btn-lg">1</button>
+                                <button type="button" class="btn btn-outline-dark btn-lg">2</button>
+                                <button type="button" class="btn btn-outline-warning btn-lg">3</button>
+                                <button type="button" class="btn btn-outline-dark btn-lg">4</button>
+                                <button type="button" class="btn btn-outline-primary btn-lg">5</button>
+                                Συμφωνώ
+                            </div>
                         </div>
                         <div class="mySlides">
-                            <h2>Νομίζω ότι θα χρειαστώ βοήθεια από κάποιον ειδικό για να μπορέσω να χρησιμοποιήσω αυτά τα
-                            παιχνίδια</h2>
-                            Διαφωνώ
-                            <button type="button" class="btn btn-outline-danger btn-lg">1</button>
-                            <button type="button" class="btn btn-outline-dark btn-lg">2</button>
-                            <button type="button" class="btn btn-outline-warning btn-lg">3</button>
-                            <button type="button" class="btn btn-outline-dark btn-lg">4</button>
-                            <button type="button" class="btn btn-outline-primary btn-lg">5</button>
-                            Συμφωνώ
+                            <div name="question4">
+                                <h2>Νομίζω ότι θα χρειαστώ βοήθεια από κάποιον ειδικό για να μπορέσω να χρησιμοποιήσω αυτά τα
+                                παιχνίδια</h2>
+                                Διαφωνώ
+                                <button type="button" class="btn btn-outline-danger btn-lg">1</button>
+                                <button type="button" class="btn btn-outline-dark btn-lg">2</button>
+                                <button type="button" class="btn btn-outline-warning btn-lg">3</button>
+                                <button type="button" class="btn btn-outline-dark btn-lg">4</button>
+                                <button type="button" class="btn btn-outline-primary btn-lg">5</button>
+                                Συμφωνώ
+                            </div>
                         </div>
                         <div class="mySlides">
-                            <h2>Βρήκα τις διάφορες λειτουργίες σ’ αυτά τα παιχνίδια καλά ενσωματωμένες</h2>
-                            Διαφωνώ
-                            <button type="button" class="btn btn-outline-danger btn-lg">1</button>
-                            <button type="button" class="btn btn-outline-dark btn-lg">2</button>
-                            <button type="button" class="btn btn-outline-warning btn-lg">3</button>
-                            <button type="button" class="btn btn-outline-dark btn-lg">4</button>
-                            <button type="button" class="btn btn-outline-primary btn-lg">5</button>
-                            Συμφωνώ
+                            <div name="question5">
+                                <h2>Βρήκα τις διάφορες λειτουργίες σ’ αυτά τα παιχνίδια καλά ενσωματωμένες</h2>
+                                Διαφωνώ
+                                <button type="button" class="btn btn-outline-danger btn-lg">1</button>
+                                <button type="button" class="btn btn-outline-dark btn-lg">2</button>
+                                <button type="button" class="btn btn-outline-warning btn-lg">3</button>
+                                <button type="button" class="btn btn-outline-dark btn-lg">4</button>
+                                <button type="button" class="btn btn-outline-primary btn-lg">5</button>
+                                Συμφωνώ
+                            </div>
                         </div>
                         <div class="mySlides">
-                            <h2>Σκέφτηκα ότι υπήρχε μεγάλη ασυνέπεια στη λειτουργία των παιχνιδιών</h2>
-                            Διαφωνώ
-                            <button type="button" class="btn btn-outline-danger btn-lg">1</button>
-                            <button type="button" class="btn btn-outline-dark btn-lg">2</button>
-                            <button type="button" class="btn btn-outline-warning btn-lg">3</button>
-                            <button type="button" class="btn btn-outline-dark btn-lg">4</button>
-                            <button type="button" class="btn btn-outline-primary btn-lg">5</button>
-                            Συμφωνώ
+                            <div name="question6">
+                                <h2>Σκέφτηκα ότι υπήρχε μεγάλη ασυνέπεια στη λειτουργία των παιχνιδιών</h2>
+                                Διαφωνώ
+                                <button type="button" class="btn btn-outline-danger btn-lg">1</button>
+                                <button type="button" class="btn btn-outline-dark btn-lg">2</button>
+                                <button type="button" class="btn btn-outline-warning btn-lg">3</button>
+                                <button type="button" class="btn btn-outline-dark btn-lg">4</button>
+                                <button type="button" class="btn btn-outline-primary btn-lg">5</button>
+                                Συμφωνώ
+                            </div>
                         </div>
                         <div class="mySlides">
-                            <h2>Φαντάζομαι ότι οι περισσότεροι άνθρωποι θα μάθουν να χρησιμοποιούν αυτά τα παιχνίδια πολύ
-                            γρήγορα</h2>
-                            Διαφωνώ
-                            <button type="button" class="btn btn-outline-danger btn-lg">1</button>
-                            <button type="button" class="btn btn-outline-dark btn-lg">2</button>
-                            <button type="button" class="btn btn-outline-warning btn-lg">3</button>
-                            <button type="button" class="btn btn-outline-dark btn-lg">4</button>
-                            <button type="button" class="btn btn-outline-primary btn-lg">5</button>
-                            Συμφωνώ
+                            <div name="question7">
+                                <h2>Φαντάζομαι ότι οι περισσότεροι άνθρωποι θα μάθουν να χρησιμοποιούν αυτά τα παιχνίδια πολύ
+                                γρήγορα</h2>
+                                Διαφωνώ
+                                <button type="button" class="btn btn-outline-danger btn-lg">1</button>
+                                <button type="button" class="btn btn-outline-dark btn-lg">2</button>
+                                <button type="button" class="btn btn-outline-warning btn-lg">3</button>
+                                <button type="button" class="btn btn-outline-dark btn-lg">4</button>
+                                <button type="button" class="btn btn-outline-primary btn-lg">5</button>
+                                Συμφωνώ
+                            </div>
                         </div>
                         <div class="mySlides">
-                            <h2>Βρήκα αυτά τα παιχνίδια πολύ δύσκολα/περίπλοκα στη χρήση</h2>
-                            Διαφωνώ
-                            <button type="button" class="btn btn-outline-danger btn-lg">1</button>
-                            <button type="button" class="btn btn-outline-dark btn-lg">2</button>
-                            <button type="button" class="btn btn-outline-warning btn-lg">3</button>
-                            <button type="button" class="btn btn-outline-dark btn-lg">4</button>
-                            <button type="button" class="btn btn-outline-primary btn-lg">5</button>
-                            Συμφωνώ
+                            <div name="question8">
+                                <h2>Βρήκα αυτά τα παιχνίδια πολύ δύσκολα/περίπλοκα στη χρήση</h2>
+                                Διαφωνώ
+                                <button type="button" class="btn btn-outline-danger btn-lg">1</button>
+                                <button type="button" class="btn btn-outline-dark btn-lg">2</button>
+                                <button type="button" class="btn btn-outline-warning btn-lg">3</button>
+                                <button type="button" class="btn btn-outline-dark btn-lg">4</button>
+                                <button type="button" class="btn btn-outline-primary btn-lg">5</button>
+                                Συμφωνώ
+                            </div>
                         </div>
                         <div class="mySlides">
-                            <h2>Ένιωσα πολύ σίγουρος/η χρησιμοποιώντας αυτά τα παιχνίδια</h2>
-                            Διαφωνώ
-                            <button type="button" class="btn btn-outline-danger btn-lg">1</button>
-                            <button type="button" class="btn btn-outline-dark btn-lg">2</button>
-                            <button type="button" class="btn btn-outline-warning btn-lg">3</button>
-                            <button type="button" class="btn btn-outline-dark btn-lg">4</button>
-                            <button type="button" class="btn btn-outline-primary btn-lg">5</button>
-                            Συμφωνώ
+                            <div name="question9">
+                                <h2>Ένιωσα πολύ σίγουρος/η χρησιμοποιώντας αυτά τα παιχνίδια</h2>
+                                Διαφωνώ
+                                <button type="button" class="btn btn-outline-danger btn-lg">1</button>
+                                <button type="button" class="btn btn-outline-dark btn-lg">2</button>
+                                <button type="button" class="btn btn-outline-warning btn-lg">3</button>
+                                <button type="button" class="btn btn-outline-dark btn-lg">4</button>
+                                <button type="button" class="btn btn-outline-primary btn-lg">5</button>
+                                Συμφωνώ
+                            </div>
                         </div>
                         <div class="mySlides">
-                            <h2>Χρειάστηκε να μάθω πολλά πράγματα πριν να μπορέσω να ξεκινήσω με αυτά τα παιχνίδια</h2>
-                            Διαφωνώ
-                            <button type="button" class="btn btn-outline-danger btn-lg">1</button>
-                            <button type="button" class="btn btn-outline-dark btn-lg">2</button>
-                            <button type="button" class="btn btn-outline-warning btn-lg">3</button>
-                            <button type="button" class="btn btn-outline-dark btn-lg">4</button>
-                            <button type="button" class="btn btn-outline-primary btn-lg">5</button>
-                            Συμφωνώ
+                            <div name="question10">
+                                <h2>Χρειάστηκε να μάθω πολλά πράγματα πριν να μπορέσω να ξεκινήσω με αυτά τα παιχνίδια</h2>
+                                Διαφωνώ
+                                <button type="button" class="btn btn-outline-danger btn-lg">1</button>
+                                <button type="button" class="btn btn-outline-dark btn-lg">2</button>
+                                <button type="button" class="btn btn-outline-warning btn-lg">3</button>
+                                <button type="button" class="btn btn-outline-dark btn-lg">4</button>
+                                <button type="button" class="btn btn-outline-primary btn-lg">5</button>
+                                Συμφωνώ
+                            </div>
                         </div>
                     </div>
                 </div>
