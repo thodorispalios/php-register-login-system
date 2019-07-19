@@ -39,6 +39,37 @@
                 </form>
             </div>
         </nav>
+        <div>
+            <?php
+                $servername = "localhost";
+                $username = "root";
+                $password = "";
+                $dbname = "webite";
+                
+                $conn = new mysqli($servername, $username, $password, $dbname);
+                
+                // Check connection
+                if ($conn->connect_error) {
+                    die("Connection failed: " . $conn->connect_error);
+                } 
+
+                $sql = "SELECT description FROM surveyquestion";
+                $result = $conn->query($sql);
+
+                if ($result->num_rows > 0) {
+                // output data of each row
+                    while($row = $result->fetch_assoc()) {
+                        echo $row['description'];
+                    }
+
+                } else {
+                    echo "0 results";
+                }
+                $conn->close();
+            
+            ?>
+        </div>
+        
         <main role="main" class="container-fluid">
             <div class="row header">
                 <div class="col-12 text-center header-message">
