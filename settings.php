@@ -101,6 +101,9 @@
                         <input class="form-control" type="text" name="city" placeholder="Πόλη" required>
                         <hr class="mb-3">
                         <input class="btn btn-primary" type="submit" name="submit2" value="Ενημέρωση"/>
+                        <br>
+                        <br>
+                        <a href="evaluation.php" role="button" class="btn btn-info btn-lg btn-block">Αξιολογήστε τη Σελίδα</a>
                     </div>
                     <div class="col">
                         <h3>Εκπαίδευση</h3>
