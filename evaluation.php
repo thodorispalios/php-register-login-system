@@ -17,9 +17,9 @@
     <body>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <a class="navbar-brand">Webite</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <input class="navbar-toggler" type="submit" value="" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
-            </button>
+            </input>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
@@ -33,7 +33,7 @@
                     </li>
                 </ul>
                 <form class="form-inline my-2 my-lg-0">
-                    <a class="btn btn-outline-danger my-2 my-sm-0" href="logout.php" role="button">
+                    <a class="btn btn-outline-danger my-2 my-sm-0" href="logout.php" role="submit">
                         Αποσύνδεση
                     </a>
                 </form>
@@ -41,31 +41,34 @@
         </nav>
         <div>
             <?php
-                $servername = "localhost";
-                $username = "root";
-                $password = "";
-                $dbname = "webite";
-                
-                $conn = new mysqli($servername, $username, $password, $dbname);
-                
-                // Check connection
-                if ($conn->connect_error) {
-                    die("Connection failed: " . $conn->connect_error);
-                } 
+            $servername = "localhost";
+            $username = "root";
+            $password = "";
+            $dbname = "webite";
+            
+            $conn = new mysqli($servername, $username, $password, $dbname);
+            
+            // Check connection
+            if ($conn->connect_error) {
+                die("Connection failed: " . $conn->connect_error);
+            }
 
-                $sql = "SELECT description FROM surveyquestion";
-                $result = $conn->query($sql);
 
-                if ($result->num_rows > 0) {
-                // output data of each row
-                    while($row = $result->fetch_assoc()) {
-                        echo $row['description'];
-                    }
+            $sql1 = "SELECT qID, description FROM surveyquestion";
 
-                } else {
-                    echo "0 results";
-                }
-                $conn->close();
+            // if (isset($_POST['register_btn'])){
+            //         $username = $_POST['username'];
+            //         $password = $_POST['password'];
+            //         $gender = $_POST['gender'];
+            //         $city = $_POST['city'];
+            //         $education = $_POST['education'];
+            //         $birthdate = $_POST['birthdate'];    
+                    
+            //         $sql = "INSERT INTO user (username, password, gender, city, education, birthdate) VALUES (?,?,?,?,?,?)";
+            //         $stmtinsert = $db->prepare($sql);
+            //         $result = $stmtinsert->execute([$username, $password, $gender, $city, $education, $birthdate]);
+
+            $conn->close();
             
             ?>
         </div>
@@ -73,128 +76,138 @@
         <main role="main" class="container-fluid">
             <div class="row header">
                 <div class="col-12 text-center header-message">
-                    <!-- Slideshow container -->
-                    <div class="slideshow-container">
+                    <!-- Question container -->
+                    <div class="slideshow-container" method="_POST">
                         <!-- Questionaire in the form of a slideshow -->
-                        <div class="mySlides">
+                        <div class="myQuestions">
                             <div name="question1">
-                                <h2>Νομίζω ότι θα ήθελα να χρησιμοποιώ αυτά τα παιχνίδια συχνά</h2>
+                                <label for="question1"><h2>Νομίζω ότι θα ήθελα να χρησιμοποιώ αυτά τα παιχνίδια συχνά</h2></label>
+                                </br>
                                 Διαφωνώ
-                                <button type="button" class="btn btn-outline-danger btn-lg">1</button>
-                                <button type="button" class="btn btn-outline-dark btn-lg">2</button>
-                                <button type="button" class="btn btn-outline-warning btn-lg">3</button>
-                                <button type="button" class="btn btn-outline-dark btn-lg">4</button>
-                                <button type="button" class="btn btn-outline-primary btn-lg">5</button>
+                                <input type="submit" value="1" name="1" class="btn btn-outline-danger btn-lg"></input>
+                                <input type="submit" value="2" name="2" class="btn btn-outline-dark btn-lg"></input>
+                                <input type="submit" value="3" name="3" class="btn btn-outline-warning btn-lg"></input>
+                                <input type="submit" value="4" name="4" class="btn btn-outline-dark btn-lg"></input>
+                                <input type="submit" value="5" name="5" class="btn btn-outline-primary btn-lg"></input>
                                 Συμφωνώ
                             </div>
                         </div>
-                        <div class="mySlides">
+                        <div class="myQuestions">
                             <div name="question2">
-                                <h2>Βρήκα αυτά τα παιχνίδια αδικαιολόγητα περίπλοκα</h2>
+                                <label for="question2"><h2>Βρήκα αυτά τα παιχνίδια αδικαιολόγητα περίπλοκα</h2></label>
+                                </br>
                                 Διαφωνώ
-                                <button type="button" class="btn btn-outline-danger btn-lg">1</button>
-                                <button type="button" class="btn btn-outline-dark btn-lg">2</button>
-                                <button type="button" class="btn btn-outline-warning btn-lg">3</button>
-                                <button type="button" class="btn btn-outline-dark btn-lg">4</button>
-                                <button type="button" class="btn btn-outline-primary btn-lg">5</button>
+                                <input type="submit" value="1" name="1" class="btn btn-outline-danger btn-lg"></input>
+                                <input type="submit" value="2" name="2" class="btn btn-outline-dark btn-lg"></input>
+                                <input type="submit" value="3" name="3" class="btn btn-outline-warning btn-lg"></input>
+                                <input type="submit" value="4" name="4" class="btn btn-outline-dark btn-lg"></input>
+                                <input type="submit" value="5" name="5" class="btn btn-outline-primary btn-lg"></input>
                                 Συμφωνώ
                             </div>
                         </div>
-                        <div class="mySlides">
+                        <div class="myQuestions">
                             <div name="question3">
-                                <h2>Σκέφτηκα ότι αυτά τα παιχνίδια ήταν εύκολα στη χρήση</h2>
+                                <label for="question3"><h2>Σκέφτηκα ότι αυτά τα παιχνίδια ήταν εύκολα στη χρήση</h2></label>
+                                </br>
                                 Διαφωνώ
-                                <button type="button" class="btn btn-outline-danger btn-lg">1</button>
-                                <button type="button" class="btn btn-outline-dark btn-lg">2</button>
-                                <button type="button" class="btn btn-outline-warning btn-lg">3</button>
-                                <button type="button" class="btn btn-outline-dark btn-lg">4</button>
-                                <button type="button" class="btn btn-outline-primary btn-lg">5</button>
+                                <input type="submit" value="1" name="1" class="btn btn-outline-danger btn-lg"></input>
+                                <input type="submit" value="2" name="2" class="btn btn-outline-dark btn-lg"></input>
+                                <input type="submit" value="3" name="3" class="btn btn-outline-warning btn-lg"></input>
+                                <input type="submit" value="4" name="4" class="btn btn-outline-dark btn-lg"></input>
+                                <input type="submit" value="5" name="5" class="btn btn-outline-primary btn-lg"></input>
                                 Συμφωνώ
                             </div>
                         </div>
-                        <div class="mySlides">
+                        <div class="myQuestions">
                             <div name="question4">
-                                <h2>Νομίζω ότι θα χρειαστώ βοήθεια από κάποιον ειδικό για να μπορέσω να χρησιμοποιήσω αυτά τα
-                                παιχνίδια</h2>
+                                <label for="question4"><h2>Νομίζω ότι θα χρειαστώ βοήθεια από κάποιον ειδικό για να μπορέσω να χρησιμοποιήσω αυτά τα
+                                παιχνίδια</h2></label>
+                                </br>
                                 Διαφωνώ
-                                <button type="button" class="btn btn-outline-danger btn-lg">1</button>
-                                <button type="button" class="btn btn-outline-dark btn-lg">2</button>
-                                <button type="button" class="btn btn-outline-warning btn-lg">3</button>
-                                <button type="button" class="btn btn-outline-dark btn-lg">4</button>
-                                <button type="button" class="btn btn-outline-primary btn-lg">5</button>
+                                <input type="submit" value="1" name="1" class="btn btn-outline-danger btn-lg"></input>
+                                <input type="submit" value="2" name="2" class="btn btn-outline-dark btn-lg"></input>
+                                <input type="submit" value="3" name="3" class="btn btn-outline-warning btn-lg"></input>
+                                <input type="submit" value="4" name="4" class="btn btn-outline-dark btn-lg"></input>
+                                <input type="submit" value="5" name="5" class="btn btn-outline-primary btn-lg"></input>
                                 Συμφωνώ
                             </div>
                         </div>
-                        <div class="mySlides">
+                        <div class="myQuestions">
                             <div name="question5">
-                                <h2>Βρήκα τις διάφορες λειτουργίες σ’ αυτά τα παιχνίδια καλά ενσωματωμένες</h2>
+                                <label for="question5"><h2>Βρήκα τις διάφορες λειτουργίες σ’ αυτά τα παιχνίδια καλά ενσωματωμένες</h2></label>
+                                </br>
                                 Διαφωνώ
-                                <button type="button" class="btn btn-outline-danger btn-lg">1</button>
-                                <button type="button" class="btn btn-outline-dark btn-lg">2</button>
-                                <button type="button" class="btn btn-outline-warning btn-lg">3</button>
-                                <button type="button" class="btn btn-outline-dark btn-lg">4</button>
-                                <button type="button" class="btn btn-outline-primary btn-lg">5</button>
+                                <input type="submit" value="1" name="1" class="btn btn-outline-danger btn-lg"></input>
+                                <input type="submit" value="2" name="2" class="btn btn-outline-dark btn-lg"></input>
+                                <input type="submit" value="3" name="3" class="btn btn-outline-warning btn-lg"></input>
+                                <input type="submit" value="4" name="4" class="btn btn-outline-dark btn-lg"></input>
+                                <input type="submit" value="5" name="5" class="btn btn-outline-primary btn-lg"></input>
                                 Συμφωνώ
                             </div>
                         </div>
-                        <div class="mySlides">
+                        <div class="myQuestions">
                             <div name="question6">
-                                <h2>Σκέφτηκα ότι υπήρχε μεγάλη ασυνέπεια στη λειτουργία των παιχνιδιών</h2>
+                                <label for="question6"><h2>Σκέφτηκα ότι υπήρχε μεγάλη ασυνέπεια στη λειτουργία των παιχνιδιών</h2></label>
+                                </br>
                                 Διαφωνώ
-                                <button type="button" class="btn btn-outline-danger btn-lg">1</button>
-                                <button type="button" class="btn btn-outline-dark btn-lg">2</button>
-                                <button type="button" class="btn btn-outline-warning btn-lg">3</button>
-                                <button type="button" class="btn btn-outline-dark btn-lg">4</button>
-                                <button type="button" class="btn btn-outline-primary btn-lg">5</button>
+                                <input type="submit" value="1" name="1" class="btn btn-outline-danger btn-lg"></input>
+                                <input type="submit" value="2" name="2" class="btn btn-outline-dark btn-lg"></input>
+                                <input type="submit" value="3" name="3" class="btn btn-outline-warning btn-lg"></input>
+                                <input type="submit" value="4" name="4" class="btn btn-outline-dark btn-lg"></input>
+                                <input type="submit" value="5" name="5" class="btn btn-outline-primary btn-lg"></input>
                                 Συμφωνώ
                             </div>
                         </div>
-                        <div class="mySlides">
+                        <div class="myQuestions">
                             <div name="question7">
-                                <h2>Φαντάζομαι ότι οι περισσότεροι άνθρωποι θα μάθουν να χρησιμοποιούν αυτά τα παιχνίδια πολύ
-                                γρήγορα</h2>
+                                <label for="question7"><h2>Φαντάζομαι ότι οι περισσότεροι άνθρωποι θα μάθουν να χρησιμοποιούν αυτά τα παιχνίδια πολύ
+                                γρήγορα</h2></label>
+                                </br>
                                 Διαφωνώ
-                                <button type="button" class="btn btn-outline-danger btn-lg">1</button>
-                                <button type="button" class="btn btn-outline-dark btn-lg">2</button>
-                                <button type="button" class="btn btn-outline-warning btn-lg">3</button>
-                                <button type="button" class="btn btn-outline-dark btn-lg">4</button>
-                                <button type="button" class="btn btn-outline-primary btn-lg">5</button>
+                                <input type="submit" value="1" name="1" class="btn btn-outline-danger btn-lg"></input>
+                                <input type="submit" value="2" name="2" class="btn btn-outline-dark btn-lg"></input>
+                                <input type="submit" value="3" name="3" class="btn btn-outline-warning btn-lg"></input>
+                                <input type="submit" value="4" name="4" class="btn btn-outline-dark btn-lg"></input>
+                                <input type="submit" value="5" name="5" class="btn btn-outline-primary btn-lg"></input>
                                 Συμφωνώ
                             </div>
                         </div>
-                        <div class="mySlides">
+                        <div class="myQuestions">
                             <div name="question8">
-                                <h2>Βρήκα αυτά τα παιχνίδια πολύ δύσκολα/περίπλοκα στη χρήση</h2>
+                                <label for="question8"><h2>Βρήκα αυτά τα παιχνίδια πολύ δύσκολα/περίπλοκα στη χρήση</h2></label>
+                                </br>
                                 Διαφωνώ
-                                <button type="button" class="btn btn-outline-danger btn-lg">1</button>
-                                <button type="button" class="btn btn-outline-dark btn-lg">2</button>
-                                <button type="button" class="btn btn-outline-warning btn-lg">3</button>
-                                <button type="button" class="btn btn-outline-dark btn-lg">4</button>
-                                <button type="button" class="btn btn-outline-primary btn-lg">5</button>
+                                <input type="submit" value="1" name="1" class="btn btn-outline-danger btn-lg"></input>
+                                <input type="submit" value="2" name="2" class="btn btn-outline-dark btn-lg"></input>
+                                <input type="submit" value="3" name="3" class="btn btn-outline-warning btn-lg"></input>
+                                <input type="submit" value="4" name="4" class="btn btn-outline-dark btn-lg"></input>
+                                <input type="submit" value="5" name="5" class="btn btn-outline-primary btn-lg"></input>
                                 Συμφωνώ
                             </div>
                         </div>
-                        <div class="mySlides">
+                        <div class="myQuestions">
                             <div name="question9">
-                                <h2>Ένιωσα πολύ σίγουρος/η χρησιμοποιώντας αυτά τα παιχνίδια</h2>
+                                <label for="question9"><h2>Ένιωσα πολύ σίγουρος/η χρησιμοποιώντας αυτά τα παιχνίδια</h2></label>
+                                </br>
                                 Διαφωνώ
-                                <button type="button" class="btn btn-outline-danger btn-lg">1</button>
-                                <button type="button" class="btn btn-outline-dark btn-lg">2</button>
-                                <button type="button" class="btn btn-outline-warning btn-lg">3</button>
-                                <button type="button" class="btn btn-outline-dark btn-lg">4</button>
-                                <button type="button" class="btn btn-outline-primary btn-lg">5</button>
+                                <input type="submit" value="1" name="1" class="btn btn-outline-danger btn-lg"></input>
+                                <input type="submit" value="2" name="2" class="btn btn-outline-dark btn-lg"></input>
+                                <input type="submit" value="3" name="3" class="btn btn-outline-warning btn-lg"></input>
+                                <input type="submit" value="4" name="4" class="btn btn-outline-dark btn-lg"></input>
+                                <input type="submit" value="5" name="5" class="btn btn-outline-primary btn-lg"></input>
                                 Συμφωνώ
                             </div>
                         </div>
-                        <div class="mySlides">
+                        <div class="myQuestions">
                             <div name="question10">
-                                <h2>Χρειάστηκε να μάθω πολλά πράγματα πριν να μπορέσω να ξεκινήσω με αυτά τα παιχνίδια</h2>
+                                <label for="question10"><h2>Χρειάστηκε να μάθω πολλά πράγματα πριν να μπορέσω να ξεκινήσω με αυτά τα παιχνίδια</h2></label>
+                                </br>
                                 Διαφωνώ
-                                <button type="button" class="btn btn-outline-danger btn-lg">1</button>
-                                <button type="button" class="btn btn-outline-dark btn-lg">2</button>
-                                <button type="button" class="btn btn-outline-warning btn-lg">3</button>
-                                <button type="button" class="btn btn-outline-dark btn-lg">4</button>
-                                <button type="button" class="btn btn-outline-primary btn-lg">5</button>
+                                <input type="submit" value="1" name="1" class="btn btn-outline-danger btn-lg"></input>
+                                <input type="submit" value="2" name="2" class="btn btn-outline-dark btn-lg"></input>
+                                <input type="submit" value="3" name="3" class="btn btn-outline-warning btn-lg"></input>
+                                <input type="submit" value="4" name="4" class="btn btn-outline-dark btn-lg"></input>
+                                <input type="submit" value="5" name="5" class="btn btn-outline-primary btn-lg"></input>
                                 Συμφωνώ
                             </div>
                         </div>
@@ -203,35 +216,35 @@
             </div>
             <div class="row">
                 <div class="col-12 text-center">
-                    <!-- Next/prev buttons -->
-                    <button class="btn btn-light" onclick="plusSlides(-1)">Προηγούμενη</button>
-                    <button class="btn btn-dark" onclick="plusSlides(1)">Επόμενη</button>
+                    <!-- Next/prev inputs -->
+                    <button class="btn btn-light" onclick="plusQuestions(-1)">Προηγούμενη</button>
+                    <button class="btn btn-dark" onclick="plusQuestions(1)">Επόμενη</button>
                 </div>
             </div>
             </main><!-- /.container -->
             <script>
-            var slideIndex = 1;
-            showSlides(slideIndex);
-            function plusSlides(n) {
-            showSlides(slideIndex += n);
+            var questionIndex = 1;
+            showQuestions(questionIndex);
+            function plusQuestions(n) {
+            showQuestions(questionIndex += n);
             }
             function currentSlide(n) {
-            showSlides(slideIndex = n);
+            showQuestions(questionIndex = n);
             }
-            function showSlides(n) {
+            function showQuestions(n) {
             var i;
-            var slides = document.getElementsByClassName("mySlides");
+            var questions = document.getElementsByClassName("myQuestions");
             var dots = document.getElementsByClassName("dot");
-            if (n > slides.length) {slideIndex = 1}
-            if (n < 1) {slideIndex = slides.length}
-            for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
+            if (n > questions.length) {questionIndex = 1}
+            if (n < 1) {questionIndex = questions.length}
+            for (i = 0; i < questions.length; i++) {
+            questions[i].style.display = "none";
             }
             for (i = 0; i < dots.length; i++) {
             dots[i].className = dots[i].className.replace(" active", "");
             }
-            slides[slideIndex-1].style.display = "block";
-            dots[slideIndex-1].className += " active";
+            questions[questionIndex-1].style.display = "block";
+            dots[questionIndex-1].className += " active";
             }
             </script>
         </body>
