@@ -54,20 +54,8 @@
             }
 
 
-            $sql1 = "SELECT qID, description FROM surveyquestion";
-
-            // if (isset($_POST['register_btn'])){
-            //         $username = $_POST['username'];
-            //         $password = $_POST['password'];
-            //         $gender = $_POST['gender'];
-            //         $city = $_POST['city'];
-            //         $education = $_POST['education'];
-            //         $birthdate = $_POST['birthdate'];    
-                    
-            //         $sql = "INSERT INTO user (username, password, gender, city, education, birthdate) VALUES (?,?,?,?,?,?)";
-            //         $stmtinsert = $db->prepare($sql);
-            //         $result = $stmtinsert->execute([$username, $password, $gender, $city, $education, $birthdate]);
-
+            $sql = "SELECT qID, description FROM surveyquestion";
+            
             $conn->close();
             
             ?>
