@@ -28,7 +28,7 @@
                         <a class="nav-link" href="index.php">Αρχική <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active">Παιχίδια</a>
+                        <a class="nav-link" href="gamesindex.php">Παιχίδια</a>
                     </li>
                     <li class="nav-item ">
                         <a class="nav-link" href="settings.php">Επιλογές</a>
@@ -42,19 +42,7 @@
             </div>
         </nav>
         <main role="main" class="container-fluid">
-            <div class="text-center header-message">
-                <h1>Παιχνίδια</h1>
-                <div class="row text-center header">
-                    <div class="col header-message" style="top:20%;">
-                        <a href="anagram.php"><h2>Βρες τη Λέξη</h2></a>
-                        <img src="img/anagram.png" style="width:50%;height: 50%;" href="anagram.php" class="img-fluid" alt="anagram">
-                    </div>
-                    <div class="col header-message" style="top:20%;">
-                        <a href="glossa.php"><h2>Γλώσσα</h2></a>
-                        <img src="img/glossa.png" style="width:50%;height: 50%;" class="img-fluid" alt="game2">
-                    </div>
-                </div>
-            </div>
+            
         </main><!-- /.container -->
     </body>
 </html>
