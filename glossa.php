@@ -1,6 +1,5 @@
-<?php
-    require_once('config.php');
-?>
+<?php include 'access.php'; ?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -9,7 +8,7 @@
         <meta name="description" content="">
         <meta name="author" content="">
         <link rel="icon" href="../../../../favicon.ico">
-        <title>Παιχνίδια</title>
+        <title>Γλώσσα</title>
         <!--Template based on URL below-->
         <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/starter-template/">
         <!-- Bootstrap core CSS -->

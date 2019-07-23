@@ -1,6 +1,5 @@
-<?php
-    require_once('config.php');
-?>
+<?php include 'access.php'; ?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
