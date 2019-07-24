@@ -31,18 +31,29 @@
                     $username = $_POST['username'];
                     $password = $_POST['password'];
                     
+                    //Sql parse για έλεγχο του username και του password
                     $sql = "SELECT * FROM user WHERE username = '$username' AND password = '$password'";
                     $result = mysqli_query($db, $sql);
 
+                    
+                
                     if(mysqli_num_rows($result) == 1){
-                        $_SESSION['message'] = "You are now logged in";
-                        $_SESSION['username'] = $username; 
+                        $_SESSION['message'] = "Επιτυχής Σύνδεση";
+                        $_SESSION['username'] = $username;
+
+                        //Καταγραφή του εκάστοτε login
+                        $_SESSION["userId"] = $sql['userID'];
+                        $date = date('Y-m-d H:i:s');
+                        $sql1 = mysqli_query($success, "INSERT INTO login VALUES ('$date', 'userID')".$_POST['date'] and $_POST['userID']);
+                        $row = mysqli_num_rows($sql1);
+
+                        //επιστροφή στο index
                         header("location: index.php");
                     }else {
-                        $_SESSION['message'] = "Username / Password combination incorrect";
+                        $_SESSION['message'] = "Λανθασμένο όνομα χρήστη ή κωδικός";
                     }
 
-                }
+            }                
 
             ?>
         </div>
