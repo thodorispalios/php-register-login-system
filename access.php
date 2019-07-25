@@ -70,7 +70,7 @@ $_SESSION['username'] = $username;
 $_SESSION['password'] = $password;
 $db = mysqli_connect("localhost", "root", "", "webite");
 
-$sql = "SELECT * FROM user WHERE userID = $userID AND username = '$username' AND password = $password";
+$sql = "SELECT userID, username, password FROM user WHERE username = '$username' AND password = $password";
 
 $result = mysqli_query($db, $sql);
 

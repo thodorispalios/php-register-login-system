@@ -31,8 +31,7 @@
                     $username = $_POST['username'];
                     $password = $_POST['password'];
                     
-                    //Sql parse για έλεγχο του username και του password
-                    $sql = "SELECT * FROM user WHERE username = '$username' AND password = '$password'";
+                    $sql = "SELECT userID, username, password FROM user WHERE username = '$username' AND password = '$password'";
                     $result = mysqli_query($db, $sql);
 
                     
@@ -42,9 +41,9 @@
                         $_SESSION['username'] = $username;
 
                         //Καταγραφή του εκάστοτε login
-                        $_SESSION["userId"] = $sql['userID'];
+                        $_SESSION["userId"] = $sql['user.userID'];
                         $date = date('Y-m-d H:i:s');
-                        $sql1 = mysqli_query($success, "INSERT INTO login VALUES ('$date', 'userID')".$_POST['date'] and $_POST['userID']);
+                        $sql1 = mysqli_query($success, "INSERT INTO login VALUES ('date', 'userID')".$_POST['date'] AND $_POST['userID']);
                         $row = mysqli_num_rows($sql1);
 
                         //επιστροφή στο index
