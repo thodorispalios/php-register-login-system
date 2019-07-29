@@ -2,7 +2,7 @@
 .header {
   height: 30em;
   text-align: center;
-  border: 2px dashed #f69c55;
+  background-color: #F2F2F2;
 }
 
 .header-message{
@@ -15,8 +15,6 @@
 .spacer {
   height: 4em;
 }
-
-
 
 /*Game*/
 .game {
