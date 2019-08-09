@@ -1,5 +1,6 @@
 <?php // access.php
 include_once 'config.php';
+error_reporting(E_ERROR);
 
 //Το αρχείο αυτό ελέγχει εαν ο χρήστης που προσπαθεί να μπει σε μία από τις υποσελίδες του site, έχει συνδεθεί. Εαν δεν έχει
 //συνδεθεί του δίνει τη δυνατότητα να το κάνει μέσω της παρακάτω φόρμας ή να εγγραφεί με παραπομπή στο register.php 
@@ -68,6 +69,7 @@ if(!isset($username)) {
 
 $_SESSION['username'] = $username;
 $_SESSION['password'] = $password;
+
 $db = mysqli_connect("localhost", "root", "", "webite");
 
 $sql = "SELECT userID, username, password FROM user WHERE username = '$username' AND password = $password";
