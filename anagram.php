@@ -1,4 +1,5 @@
 <?php include 'access.php'; ?>
+<?php include 'pointsystem.php' ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -44,8 +45,8 @@
     <main role="main" class="container-fluid">
       <div class="game">
         <div class="buttons">
-          <button id="new" class="btn btn-primary btn-lg">NEW GAME</button>
-          <button id="reveal" class="btn btn-secondary btn-lg">REVEAL</button>
+          <button id="new" class="btn btn-primary btn-lg"> ΝΕΟ ΠΑΙΧΝΙΔΙ</button>
+          <button id="reveal" class="btn btn-secondary btn-lg">ΕΛΕΓΧΟΣ</button>
         </div>
         <ul id="question" class="ul1">
         </ul>
@@ -59,74 +60,80 @@
       <script>
 
           const solution = $('#solution');
+          const newGame = $('#new');
+          const reveal = $('#reveal');
+          
           function revealHandler(answer) {
             reveal.click(function () {
               solution.empty();
-              animationStop();
-              answer.split('').forEach((letter) =>
-              solution.append("<li>" + letter + "</li>"));
+              answer.split('').forEach((letter) => solution.append("<li>" + letter + "</li>"));
             });
           }
 
           const wordArrayEasy = {
-            ["QUITESOUR", "TURQUOISE"],
-            ["FREEGROIN", "FOREIGNER"],
-            ["SCARYPOLE", "COSPLAYER"],
-            ["ADMITLANE", "LAMINATED"],
-            ["DUNECRANE", "ENDURANCE"],
-            ["QUITESEXI", "EXQUISITE"]
+            ["ΣΑΝΕ", "ΕΝΑΣ"],
+            ["ΕΘΚΑ", "ΚΑΘΕ"],
+            ["ΛΕΣΑ", "ΣΕΛΑ"],
+            ["ΩΜΣΑ", "ΣΩΜΑ"],
+            ["ΙΝΠΩ", "ΠΙΝΩ"],
           };
 
           const wordArrayMedium = {
-            ["TIGERNAME", "GERMINATE"],
-            ["DIRTYROOM", "DORMITORY"],
-            ["INFERCORE", "REINFORCE"],
-            ["VEGDANCES", "SCAVENGED"],
-            ["NOSEMIGHT", "SOMETHING"]
+            ["ΛΛΟΑΣ", "ΑΛΛΟΣ"],
+            ["ΛΩΠΙΕ", "ΛΕΙΠΩ"],
+            ["ΛΗΣΠΟ", "ΠΗΛΟΣ"],
+            ["ΡΕΧΑΙ", "ΧΕΡΙΑ"],
+            ["ΓΕΙΛΟ", "ΓΕΛΙΟ"]
           };
 
           const wordArrayHard = {
-            ["TIGERNAME", "GERMINATE"],
-            ["DIRTYROOM", "DORMITORY"],
-            ["INFERCORE", "REINFORCE"],
-            ["VEGDANCES", "SCAVENGED"],
-            ["NOSEMIGHT", "SOMETHING"],
-            ["NOSESTAIN", "SENSATION"]
+            ["ΟΕΡΝΤΔ", "ΔΕΝΤΡΟ"],
+            ["ΣΚΡΔΕΟ", "ΚΕΔΡΟΣ"],
+            ["ΔΙΑΜΗΣ", "ΣΗΜΑΔΙ"],
+            ["ΚΤΥΜΑΑ", "ΚΥΜΑΤΑ"],
+            ["ΣΑΤΑΜΩ", "ΣΩΜΑΤΑ"],
           };
 
 
-
-          const container = $('#question');
-          const newGame = $('#new');
-          const reveal = $('#reveal');
-
           function startGame() {
             reset();
-            let question = wordArrayEasy[Math.floor(Math.random() * wordArrayEasy.length)];
+            let difficulty = "easy"; 
+            
+            if (difficulty === "easy"){
+              let question = wordArrayEasy[Math.floor(Math.random() * wordArrayEasy.length)];
+            }else if (difficulty === "medium"){
+              let question = wordArrayMedium[Math.floor(Math.random() * wordArrayMedium.length)];
+            }else if (difficulty === "hard"){
+              let question = wordArrayHard[Math.floor(Math.random() * wordArrayHard.length)];
+            }
+            
             let scrambledArray = question[0].split('');
-            scrambledArray.forEach((letter) =>
-            container.append("<li>" + letter + "</li>"));
+            
+            scrambledArray.forEach((letter) => container.append("<li>" + letter + "</li>"));
+            
             let answer = question[1];
+
             container.sortable({
               axis: "x",
               stop: function () {
                 let attempt = "";
+                
                 container.children().each(function () {
                   attempt += $(this).text();
                 });
+                
                 if (attempt === answer) {
                   solution.empty();
-                  answer.split('').forEach((letter) =>
-                  solution.append("<li>" + letter + "</li>"));
+                  answer.split('').forEach((letter) => solution.append("<li>" + letter + "</li>"));
+
                 }
-              } });
+              } 
+            });
 
             revealHandler(answer);
           }
 
           newGame.click(startGame);
-
-
         </script>
   </body>
 </html>

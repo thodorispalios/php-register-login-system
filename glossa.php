@@ -41,7 +41,91 @@
             </div>
         </nav>
         <main role="main" class="container-fluid">
+            <div class="game">
+        <div class="buttons">
+            <button id="new" class="btn btn-primary btn-lg"> ΝΕΟ ΠΑΙΧΝΙΔΙ</button>
+            <div class="dropdown">
+                <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    ΔΥΣΚΟΛΙΑ
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" id="difficulty">
+                    <a class="dropdown-item" id="easy">ΕΥΚΟΛΟ</a>
+                    <a class="dropdown-item" id="medium">ΜΕΣΑΙΟ</a>
+                    <a class="dropdown-item" id="hard">ΔΥΣΚΟΛΟ</a>
+                </div>
+            </div>
+            <button id="reveal" class="btn btn-secondary btn-lg">ΕΛΕΓΧΟΣ</button>
+        </div>
+        
+        <div id="word"></div>
+        <div id="solution" ></div>
+      </div>
+    </main>
+    
+      <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+      <script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.js'></script>
+      <script>
+
+          const solution = $('#solution');
+          const newGame = $('#new');
+          const reveal = $('#reveal');
+          const difficulty;
+          
+          function revealHandler(answer) {
+            reveal.click(function () {
+              solution.empty();
+            });
+          }
+          
+          const wordArraySynonyms = {
+            ["ΑΒΑΤΟΣ", "ΒΑΤΟΣ", "ΑΠΡΟΣΕΚΤΟΣ", "ΑΔΙΑΒΑΤΟΣ", "ΥΠΟΦΕΡΤΟΣ", "ΒΛΑΒΕΡΟΣ", "ΒΟΛΙΚΟΣ"],
+            ["ΓΝΗΣΙΟΣ", "ΠΛΑΣΤΟΣ", "ΨΕΥΤΙΚΟΣ", "ΣΤΑΣΙΜΟΣ", "ΑΛΗΘΙΝΟΣ", "ΡΗΧΟΣ", "ΑΓΝΟΣ"],
+            ["ΑΛΛΟΚΟΤΟΣ", "ΠΑΡΟΡΜΗΤΙΚΟΣ", "ΠΑΡΑΞΕΝΟΣ", "ΑΝΑΜΕΝΟΜΕΝΟΣ", "", "", ""],
+            ["ΣΑΝΕ", "ΕΝΑΣ", "", "", "", "", ""],
+            ["ΣΑΝΕ", "ΕΝΑΣ", "", "", "", "", ""],
+          };
+
+          const wordArrayAntonyms = {
+            ["ΣΑΝΕ", "ΕΝΑΣ", "", "", "", "", ""],
+            ["ΣΑΝΕ", "ΕΝΑΣ", "", "", "", "", ""],
+            ["ΣΑΝΕ", "ΕΝΑΣ", "", "", "", "", ""],
+            ["ΣΑΝΕ", "ΕΝΑΣ", "", "", "", "", ""],
+            ["ΣΑΝΕ", "ΕΝΑΣ", "", "", "", "", ""],
+          };
+
+
+          function startGame() {
+            reset();
+
+            if (difficulty === "easy"){
+              let question = wordArraySynonyms[Math.floor(Math.random() * wordArraySynonyms.length)];
+              let question = wordArraySynonyms[Math.floor(Math.random() * wordArraySynonyms.length)];
+            }else if (difficulty === "medium"){
+              let question = wordArrayAntonyms[Math.floor(Math.random() * wordArrayAntonyms.length)];
+              let question = wordArrayAntonyms[Math.floor(Math.random() * wordArrayAntonyms.length)];
+            }else if (difficulty === "hard"){
+              let question = wordArraySynonyms[Math.floor(Math.random() * wordArraySynonyms.length)];
+              let question = wordArrayAntonyms[Math.floor(Math.random() * wordArrayAntonyms.length)];
+            }
             
+            let answer = question[1];
+
+            container.sortable({
+              axis: "x",
+              stop: function () {
+                
+                if (attempt === answer) {
+                  solution.empty();
+
+                }
+              } 
+            });
+
+            revealHandler(answer);
+          }
+
+          newGame.click(startGame);
+        </script>
         </main><!-- /.container -->
     </body>
 </html>
