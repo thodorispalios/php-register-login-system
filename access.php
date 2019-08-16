@@ -67,8 +67,10 @@ if(!isset($username)) {
 	exit;
 }
 
-$_SESSION['username'] = $username;
-$_SESSION['password'] = $password;
+$_SESSION['username'] 	= 	$username;
+$_SESSION['password'] 	= 	$password;
+$_SESSION['userID']		=	$userID;
+$_SESSION['loginID']	=	$loginID;
 
 $db = mysqli_connect("localhost", "root", "", "webite");
 

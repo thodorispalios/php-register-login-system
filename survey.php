@@ -42,53 +42,39 @@
         </nav>
         <div>
             <?php
-            $servername = "localhost";
-            $username = "root";
-            $password = "";
-            $dbname = "webite";
-            
-            $conn = new mysqli($servername, $username, $password, $dbname);
-            
-            // Check connection
-            if ($conn->connect_error) {
-                die("Connection failed: " . $conn->connect_error);
-            }
-
 
             $sql = "SELECT qID, description FROM surveyquestion";
             
-            $conn->close();
-            
             // Pass the values from the buttons to the db
             if(isset($_GET['question1'])){
-                $answers = "INSERT INTO surveyanswer (aID, qID, answer, userID, loginID) VALUES ('', '1', question1, '', '')";
+                $answers = "INSERT INTO surveyanswer (aID, qID, answer, userID, loginID) VALUES ('', '1', question1, '$userID', '$loginID')";
             }
             if(isset($_GET['question2'])){
-                $answers = "INSERT INTO surveyanswer (aID, qID, answer, userID, loginID) VALUES ('', '2', question2, '', '')";
+                $answers = "INSERT INTO surveyanswer (aID, qID, answer, userID, loginID) VALUES ('', '2', question2, '$userID', '$loginID')";
             }
             if(isset($_GET['question3'])){
-                $answers = "INSERT INTO surveyanswer (aID, qID, answer, userID, loginID) VALUES ('', '3', question3, '', '')";
+                $answers = "INSERT INTO surveyanswer (aID, qID, answer, userID, loginID) VALUES ('', '3', question3, '$userID', '$loginID')";
             }
             if(isset($_GET['question4'])){
-                $answers = "INSERT INTO surveyanswer (aID, qID, answer, userID, loginID) VALUES ('', '4', question4, '', '')";
+                $answers = "INSERT INTO surveyanswer (aID, qID, answer, userID, loginID) VALUES ('', '4', question4, '$userID', '$loginID')";
             }
             if(isset($_GET['question5'])){
-                $answers = "INSERT INTO surveyanswer (aID, qID, answer, userID, loginID) VALUES ('', '5', question5, '', '')";
+                $answers = "INSERT INTO surveyanswer (aID, qID, answer, userID, loginID) VALUES ('', '5', question5, '$userID', '$loginID')";
             }
             if(isset($_GET['question6'])){
-                $answers = "INSERT INTO surveyanswer (aID, qID, answer, userID, loginID) VALUES ('', '6', question6, '', '')";
+                $answers = "INSERT INTO surveyanswer (aID, qID, answer, userID, loginID) VALUES ('', '6', question6, '$userID', '$loginID')";
             }
             if(isset($_GET['question7'])){
-                $answers = "INSERT INTO surveyanswer (aID, qID, answer, userID, loginID) VALUES ('', '7', question7, '', '')";
+                $answers = "INSERT INTO surveyanswer (aID, qID, answer, userID, loginID) VALUES ('', '7', question7, '$userID', '$loginID')";
             }
             if(isset($_GET['question8'])){
-                $answers = "INSERT INTO surveyanswer (aID, qID, answer, userID, loginID) VALUES ('', '8', question8, '', '')";
+                $answers = "INSERT INTO surveyanswer (aID, qID, answer, userID, loginID) VALUES ('', '8', question8, '$userID', '$loginID')";
             }
             if(isset($_GET['question9'])){
-                $answers = "INSERT INTO surveyanswer (aID, qID, answer, userID, loginID) VALUES ('', '9', question9, '', '')";
+                $answers = "INSERT INTO surveyanswer (aID, qID, answer, userID, loginID) VALUES ('', '9', question9, '$userID', '$loginID')";
             }
             if(isset($_GET['question10'])){
-                $answers = "INSERT INTO surveyanswer (aID, qID, answer, userID, loginID) VALUES ('', '10', question10, '', '')";
+                $answers = "INSERT INTO surveyanswer (aID, qID, answer, userID, loginID) VALUES ('', '10', question10, '$userID', '$loginID')";
             }
 
             ?>
