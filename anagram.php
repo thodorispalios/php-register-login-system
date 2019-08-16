@@ -43,6 +43,7 @@
     </nav>
     
     <main role="main" class="container-fluid">
+      <div class="spacer"></div>
       <div class="game">
         <div class="buttons">
           <button id="new" class="btn btn-primary btn-lg"> ΝΕΟ ΠΑΙΧΝΙΔΙ</button>

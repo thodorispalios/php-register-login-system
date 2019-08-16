@@ -41,9 +41,10 @@
                         $_SESSION['username'] = $username;
 
                         //Καταγραφή του εκάστοτε login
-                        $_SESSION["userId"] = $sql['user.userID'];
+                        $_SESSION['id']=$num['id']; // hold the user id in session                       
                         $date = date('Y-m-d H:i:s');
-                        $sql1 = mysqli_query($success, "INSERT INTO login VALUES ('date', 'userID')".$_POST['date'] AND $_POST['userID']);
+                        
+                        $sql1 = mysqli_query($success, "INSERT INTO login(loginID, date, userID) VALUES ('date', 'userID')".$_POST['date'] AND $_SESSION['userID']);
                         $row = mysqli_num_rows($sql1);
 
                         //επιστροφή στο index

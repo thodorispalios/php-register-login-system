@@ -41,26 +41,26 @@
             </div>
         </nav>
         <main role="main" class="container-fluid">
+          <div class="spacer"></div>
             <div class="game">
-        <div class="buttons">
-            <button id="new" class="btn btn-primary btn-lg"> ΝΕΟ ΠΑΙΧΝΙΔΙ</button>
-            <div class="dropdown">
-                <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    ΔΥΣΚΟΛΙΑ
-                </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" id="difficulty">
-                    <a class="dropdown-item" id="easy">ΕΥΚΟΛΟ</a>
-                    <a class="dropdown-item" id="medium">ΜΕΣΑΙΟ</a>
-                    <a class="dropdown-item" id="hard">ΔΥΣΚΟΛΟ</a>
+              <div class="buttons">
+                <button id="new" class="btn btn-primary btn-lg"> ΝΕΟ ΠΑΙΧΝΙΔΙ</button>
+                    <div class="dropdown">
+                      <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        ΔΥΣΚΟΛΙΑ
+                      </button>
+                      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" id="difficulty">
+                        <a class="dropdown-item" id="easy">ΕΥΚΟΛΟ</a>
+                        <a class="dropdown-item" id="medium">ΜΕΣΑΙΟ</a>
+                        <a class="dropdown-item" id="hard">ΔΥΣΚΟΛΟ</a>
+                      </div>
+                    </div>
+                  <button id="reveal" class="btn btn-secondary btn-lg">ΕΛΕΓΧΟΣ</button>
                 </div>
-            </div>
-            <button id="reveal" class="btn btn-secondary btn-lg">ΕΛΕΓΧΟΣ</button>
-        </div>
-        
-        <div id="word"></div>
-        <div id="solution" ></div>
-      </div>
-    </main>
+              <div id="word"></div>
+            <div id="solution" ></div>
+          </div>
+        </main>
     
       <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
       <script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.js'></script>
