@@ -91,8 +91,8 @@ if(mysqli_num_rows($result) == 1){
 
 	header("location: index.php");
 
-	}else {
-    	$_SESSION['message'] = "Λανθασμένο όνομα χρήστη ή κωδικός";
-	}
+}else {
+	$_SESSION['message'] = "Λανθασμένο όνομα χρήστη ή κωδικός";
+}
 
 ?>
