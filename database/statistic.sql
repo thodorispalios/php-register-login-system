@@ -2,10 +2,10 @@
 -- version 4.9.0.1
 -- https://www.phpmyadmin.net/
 --
--- Φιλοξενητής: 127.0.0.1
--- Χρόνος δημιουργίας: 19 Ιουλ 2019 στις 03:29:26
--- Έκδοση διακομιστή: 10.3.16-MariaDB
--- Έκδοση PHP: 7.3.6
+-- Host: localhost
+-- Generation Time: Sep 15, 2019 at 10:07 AM
+-- Server version: 10.3.16-MariaDB
+-- PHP Version: 7.3.7
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,13 +19,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Βάση δεδομένων: `webite`
+-- Database: `webite`
 --
 
 -- --------------------------------------------------------
 
 --
--- Δομή πίνακα για τον πίνακα `statistic`
+-- Table structure for table `statistic`
 --
 
 CREATE TABLE `statistic` (
@@ -41,6 +41,26 @@ CREATE TABLE `statistic` (
   `avgSpeed` int(11) NOT NULL,
   `playTotalTime` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `statistic`
+--
+ALTER TABLE `statistic`
+  ADD PRIMARY KEY (`statisticID`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `statistic`
+--
+ALTER TABLE `statistic`
+  MODIFY `statisticID` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

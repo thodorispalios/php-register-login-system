@@ -2,10 +2,10 @@
 -- version 4.9.0.1
 -- https://www.phpmyadmin.net/
 --
--- Φιλοξενητής: 127.0.0.1
--- Χρόνος δημιουργίας: 17 Ιουλ 2019 στις 06:29:50
--- Έκδοση διακομιστή: 10.3.16-MariaDB
--- Έκδοση PHP: 7.3.6
+-- Host: localhost
+-- Generation Time: Sep 15, 2019 at 10:08 AM
+-- Server version: 10.3.16-MariaDB
+-- PHP Version: 7.3.7
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,13 +19,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Βάση δεδομένων: `webite`
+-- Database: `webite`
 --
 
 -- --------------------------------------------------------
 
 --
--- Δομή πίνακα για τον πίνακα `user`
+-- Table structure for table `user`
 --
 
 CREATE TABLE `user` (
@@ -40,28 +40,28 @@ CREATE TABLE `user` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Άδειασμα δεδομένων του πίνακα `user`
+-- Dumping data for table `user`
 --
 
 INSERT INTO `user` (`userID`, `username`, `password`, `gender`, `city`, `birthdate`, `education`, `difficulty_level`) VALUES
 (1, 'theo', 'k', 'male', 'lamia', '2019-07-20', 'primaryschool', 0);
 
 --
--- Ευρετήρια για άχρηστους πίνακες
+-- Indexes for dumped tables
 --
 
 --
--- Ευρετήρια για πίνακα `user`
+-- Indexes for table `user`
 --
 ALTER TABLE `user`
   ADD PRIMARY KEY (`userID`);
 
 --
--- AUTO_INCREMENT για άχρηστους πίνακες
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT για πίνακα `user`
+-- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
   MODIFY `userID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;

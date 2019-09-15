@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Sep 15, 2019 at 10:07 AM
+-- Generation Time: Sep 15, 2019 at 10:08 AM
 -- Server version: 10.3.16-MariaDB
 -- PHP Version: 7.3.7
 
@@ -25,23 +25,15 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `gameevent`
+-- Table structure for table `surveyanswer`
 --
 
-CREATE TABLE `gameevent` (
-  `gameEventID` int(11) NOT NULL,
-  `gameID` int(11) NOT NULL,
+CREATE TABLE `surveyanswer` (
+  `aID` int(11) NOT NULL,
+  `qID` int(11) NOT NULL,
+  `answer` int(11) NOT NULL,
   `userID` int(11) NOT NULL,
-  `hit` int(11) NOT NULL,
-  `miss` int(11) NOT NULL,
-  `quit` int(11) NOT NULL,
-  `score` int(11) NOT NULL,
-  `accuracy` int(11) NOT NULL,
-  `avgSpeed` int(11) NOT NULL,
-  `playtime` int(11) NOT NULL,
-  `level` int(11) NOT NULL,
-  `startTimestamp` int(11) NOT NULL,
-  `enTimestamp` int(11) NOT NULL
+  `loginID` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -49,20 +41,20 @@ CREATE TABLE `gameevent` (
 --
 
 --
--- Indexes for table `gameevent`
+-- Indexes for table `surveyanswer`
 --
-ALTER TABLE `gameevent`
-  ADD PRIMARY KEY (`gameEventID`);
+ALTER TABLE `surveyanswer`
+  ADD PRIMARY KEY (`aID`);
 
 --
 -- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT for table `gameevent`
+-- AUTO_INCREMENT for table `surveyanswer`
 --
-ALTER TABLE `gameevent`
-  MODIFY `gameEventID` int(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `surveyanswer`
+  MODIFY `aID` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
